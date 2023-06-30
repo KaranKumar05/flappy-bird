@@ -1,11 +1,11 @@
 let board;
 let boardWidth = 360;
-let boardHeight = 560;
+let boardHeight = 570;
 let context;
 
 //bird
-let birdWidth = 40; //width/height ratio = 008/228 = 17/12
-let birdHeight = 34;
+let birdWidth = 35 //width/height ratio = 008/228 = 17/12
+let birdHeight = 30;
 let birdX = boardWidth / 8;
 let birdY = boardHeight / 2;
 let birdImg;
@@ -19,7 +19,7 @@ let bird = {
 
 //pipes
 let pipeArray = [];
-let pipeWidth = 64; //width/height ratio = 384/3072 = 1/8
+let pipeWidth = 54; //width/height ratio = 384/3072 = 1/8
 let pipeHeight = 512;
 let pipeX = boardWidth;
 let pipeY = 0;
@@ -53,6 +53,7 @@ window.onload = function () {
     //load images
     birdImg = new Image();
     birdImg.src = "./images/flappybird.png";
+    // birdImg.src = "./images/noob.png";
     birdImg.onload = function () {
         context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
     }
