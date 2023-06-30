@@ -14,5 +14,8 @@ body{
     
 }
 #board{
+    border-left: 2px solid white;
+    border-right:  2px solid white;
+    height: 100%;
     background-image: url(./images/flappybirdbg.png);
 }
