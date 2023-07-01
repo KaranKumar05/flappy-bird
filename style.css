@@ -8,8 +8,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* testing for mob devices  */
+    align-items: center;
     height: 100vh;
     overflow: hidden;
     background-color:rgba(113,197,207,255);
