@@ -23,7 +23,7 @@ body{
 }
 @media (max-width:505px) {
     #board{
-        height: 640px;
+        height: 720px;
         width: 360px;
         background-image: url(./images/flappybirdbg-ss.png);
         /* background-color: red; */
