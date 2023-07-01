@@ -35,18 +35,9 @@ let score = 0;
 
 
 // Game Sounds 
-let gameOverTune = new Audio('../sound/gameOverTune.mp3');
-let pointTune = new Audio('../sound/pointTune.mp3');
-let reset_btn_sound = new Audio('../sound/click.mp3');
-let themeSong = new Audio('../sound/theme.mp3');
-
-// theme song on any key press 
-document.addEventListener('keypress', () => {
-    setTimeout(() => {
-        themeSong.loop = true;
-        themeSong.play();
-    });
-});
+let gameOverTune = new Audio('./sound/gameOverTune.mp3');
+let pointTune = new Audio('./sound/pointTune.mp3');
+let start_btn = new Audio('./click.mp3');
 
 
 let restart = document.getElementById('restart');
@@ -54,25 +45,25 @@ let restart = document.getElementById('restart');
 
 // Logics
 window.onload = function () {
-    board = document.getElementById("board");  // getting the canvas by id board 
-    // selecting the height and width 
-    board.height = boardHeight;
-    board.width = boardWidth;
-    context = board.getContext("2d"); //used for drawing on the board
+        board = document.getElementById("board");  // getting the canvas by id board 
+        // selecting the height and width 
+        board.height = boardHeight;
+        board.width = boardWidth;
+        context = board.getContext("2d"); //used for drawing on the board
 
 
-    //load Bird image
-    birdImg = new Image();
-    birdImg.src = "../images/flappybird.png";
-    birdImg.onload = function () {
-        context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
-    }
+        //load Bird image
+        birdImg = new Image();
+        birdImg.src = "./images/flappybird.png";
+        birdImg.onload = function () {
+            context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
+        }
 
-    // load Pipe image 
-    topPipeImg = new Image();
-    topPipeImg.src = "../images/toppipe.png";
-    bottomPipeImg = new Image();
-    bottomPipeImg.src = "../images/bottompipe.png";
+        // load Pipe image 
+        topPipeImg = new Image();
+        topPipeImg.src = "./images/toppipe.png";
+        bottomPipeImg = new Image();
+        bottomPipeImg.src = "./images/bottompipe.png";
 
 
 
@@ -185,7 +176,6 @@ function moveBird(e) {
     velocityY = -7;
     //reset game
     restart.addEventListener('click', () => {
-        reset_btn_sound.play();
         if (gameOver) {
             bird.y = birdY;
             pipeArray = [];
@@ -205,4 +195,3 @@ function detectCollision(a, b) {
         a.y < b.y + b.height &&  //a's top left corner doesn't reach b's bottom left corner
         a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 }
-
