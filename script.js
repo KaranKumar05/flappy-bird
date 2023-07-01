@@ -41,12 +41,19 @@ let reset_btn_sound = new Audio('../sound/click.mp3');
 let themeSong = new Audio('../sound/theme.mp3');
 
 // theme song on any key press 
-document.addEventListener('keypress', () => {
+document.addEventListener('touchstart',() => {
     setTimeout(() => {
         themeSong.loop = true;
         themeSong.play();
     });
 });
+document.addEventListener('keypress',() => {
+    setTimeout(() => {
+        themeSong.loop = true;
+        themeSong.play();
+    });
+});
+
 
 
 let restart = document.getElementById('restart');
@@ -180,7 +187,7 @@ function placePipes() {
 
 }
 
-function moveBird(e) {
+function moveBird() {
     //jump
     velocityY = -7;
     //reset game
