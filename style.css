@@ -21,11 +21,12 @@ body{
     height: 570px;
     background-image: url(./images/flappybirdbg.png);
 }
-@media (max-width:450px) {
+@media (max-width:505px) {
     #board{
         border-left: 2px solid white;
         border-right:  2px solid white;
         height: 720px;
         background-image: url(./images/flappybirdbg.png);
+        /* background-color: red; */
     }
 }
