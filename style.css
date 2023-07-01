@@ -23,10 +23,9 @@ body{
 }
 @media (max-width:505px) {
     #board{
-        border-left: 2px solid white;
-        border-right:  2px solid white;
-        height: 720px;
-        background-image: url(./images/flappybirdbg.png);
+        height: 640px;
+        width: 360px;
+        background-image: url(./images/flappybirdbg-ss.png);
         /* background-color: red; */
     }
 }
