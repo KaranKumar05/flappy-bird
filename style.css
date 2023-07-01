@@ -28,7 +28,8 @@ body {
 #restart {
     position: absolute;
     top: 75%;
-    padding: 8px 20px;
+    padding: 8px 1.5em;
+    font-size: 1.5em;
     display: none;
     border-radius: 5px;
     background-color: red;
@@ -91,9 +92,8 @@ body {
 
 @media (max-width:505px) {
     #board {
-        height: 100%;
+        height: 720px;
         width: 360px;
         background-image: url(./images/flappybirdbg-ss.png);
-        /* background-color: red; */
     }
 }
