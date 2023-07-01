@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    /* testing for mob devices  */
     height: 100vh;
     overflow: hidden;
     background-color:rgba(113,197,207,255);
